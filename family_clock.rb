@@ -1,8 +1,8 @@
 #!/usr/bin/ruby
 # Simple "Weasly Clock" implementation using
 # ifftt.com 'iOS Location'>>'Maker Channel' REST requests to a Sinatra backend
-# managed by github?
-# c9-test branch?
+# managed by github? Works!
+# c9-test branch? Works!
 
 require 'sinatra'
 require 'date'
