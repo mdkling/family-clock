@@ -17,6 +17,9 @@ $all_user_states = {
 def update_frontend(user,status)
   $all_user_states[user] = status
   puts $all_user_states
+  
+  `python ./lcd_display_message.py "#{[user,status].join(" : ")}" red`
+
 end
 
 
