@@ -6,15 +6,16 @@
 # Takes 2 command-line parameters: message and color
 
 import sys
+import time
 import Adafruit_CharLCD as LCD
 
 lcd = LCD.Adafruit_CharLCDPlate()
 
 lcd.clear()
 
-color = str(sys.argv[1])
+color = str(sys.argv[2])
 
-if color == "red":
+if color == 'red':
     lcd.set_color(1,0,0)
 elif color == "green":
     lcd.set_color(0,1,0)
@@ -31,6 +32,8 @@ elif color == "white":
 elif color == "off":
     lcd.set_color(0,0,0)
 else:
-    lcd.set_color(0,0,0)
+    lcd.set_color(0,0,1)
     
 lcd.message(sys.argv[1])
+
+# time.sleep(5)
