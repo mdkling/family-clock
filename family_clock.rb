@@ -18,7 +18,7 @@ def update_frontend(user,status)
   $all_user_states[user] = status
   puts $all_user_states
   
-  `python ./lcd_display_message.py "#{[user,status].join(" : ")}" red`
+  `sudo python ./lcd_display_message.py "#{[["Mike",$all_user_states["mike"]].join(": "),["Samantha",$all_user_states["samantha"]].join(": ")].join("\n")}" cyan`
 
 end
 
@@ -103,7 +103,7 @@ end
 before do
   #initialize options for input validation
   @users = $all_user_states.keys
-  @possible_locations = ['work','home','church','school']
+  @possible_locations = ['work','home','church','school','adventure']
   @possible_states = ['entered', 'exited']
 end
 
